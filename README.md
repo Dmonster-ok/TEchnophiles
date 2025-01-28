@@ -1,0 +1,1 @@
+- concept: Basic HTML, CSS static website with unique ui for a game development startup

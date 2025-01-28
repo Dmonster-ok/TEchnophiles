@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technophiles</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+        #game {
+            box-shadow: 0 0px 20px rgba(146, 114, 177, 0.409);
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nev">
+        <a href="index.html" class="navel" id="home">Home</a>
+        <a href="game.html" class="navel" id="game">Games</a>
+        <a href="log.html" class="navel" id="log">Login</a>
+        <a href="index.html#us" class="navel" id="abou">About</a>
+    </nav>
+    <div class="outer">
+        <div class="inner">
+            <div id="one" class="boxs one">
+                <div onclick="showSlides()" class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/game1/i1.jpg" class="slider">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/game1/i2.png" class="slider">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/game1/i3.png" class="slider">
+                    </div>
+                </div>
+            </div>
+            <div id="one" class="boxs two">
+                <div class="wraper">
+                    <div class="main slog">Drivinity</div>
+                    <p class="about_content">Drivinity is a fast-paced anti-gravity racing game where Egyptian Gods
+                        collide in an epic race to decide once and for all who is superior.Players can choose between
+                        two different Gods to race in a futuristic Egyptian city where technology has mixed with ancient
+                        Egypt.Drive on two different tracks: Giza & Abydos.Use boost-pads and tricks to keep your
+                        boost-bar full and defeat your opponents.
+                    </p>
+                    <a href="index.html"><input type="button" value="Download" class="butt"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="br">
+        <a href="https://darshan.ac.in" target="_bolck"><img src="img/dulogo.png" class="dulogo" alt=""></a>
+    </div>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            Array.from(slides).forEach(slide => slide.style.display = "none");
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>
